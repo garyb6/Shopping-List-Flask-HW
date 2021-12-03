@@ -1,9 +1,19 @@
-<html>
-    <head>
-        <title>{{title}}Shopping List</title>
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content%} 
         <h1>Trip to town</h1>
+
+        <form action='/list' method='post'>
+            <label for='name'>Item</label>
+            <input type='text' name='name' id='name'>
+            <br>
+            <label for='price'>Price (£)</label>
+            <input type='number' name='price' id='price'>
+            <br>
+            <label for='quantity'>Quantity</label>
+            <input type='number' name='quantity' id='quantity'>
+            <br>
+            <input type='submit' value='Add Item!'>
+        </form>
         {% for item in items%}
         <h2>{{item.name}}</h2>
         <p>Price: {{item.price}}</p>
@@ -14,5 +24,4 @@
                 <span>Bought? &#10008;</span>
             {% endif %}
         {% endfor %}
-    </body>
-</html>
+{% endblock %} 
