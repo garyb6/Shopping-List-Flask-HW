@@ -4,4 +4,4 @@ from models.shopping_list import *
 
 @app.route('/list')
 def shopping_list():
-    return render_template('index.html', title= "Shopping List", shopping_list=shopping_list)
+    return render_template('index.html', title= "Shopping List", items=items)
