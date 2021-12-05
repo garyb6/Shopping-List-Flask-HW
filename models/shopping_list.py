@@ -10,11 +10,11 @@ items=[item1, item2, item3, item4]
 def add_new_item(item):
     items.append(item)
 
-def total_amount(item):
-    total = 0
-    for item in items:
-        total += item
-    return total
+# def total_amount(item):
+#     total = 0
+#     for item in items:
+#         total += item.price
+#     return total
 # def total_amount(item):
 # total += item.price
 # return total 
@@ -24,6 +24,5 @@ def delete_item(item_name):
     for item in items:
         if item.name == item_name:
             item_to_delete = item
-            break
 
     items.remove(item_to_delete)

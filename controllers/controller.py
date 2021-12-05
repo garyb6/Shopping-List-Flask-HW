@@ -17,7 +17,8 @@ def add_item():
 
 @app.route('/totals')
 def total():
-    return render_template('totals.html', title= "Total Amounts", items=items)
+#     total_amount(item)
+    return render_template('totals.html', title= "Grand Totals", items=items)
 
 @app.route('/shortlist')
 def shortlist():
