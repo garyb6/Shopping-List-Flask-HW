@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content%} 
-<h1>Divide and Conquer</h1>
-<h2>Still to buy</h2>
+<h1>What's left?</h1>
+<h2>Still to buy:</h2>
 {% for item in items%}
     {% if item.bought == False%}
     <h4>{{item.name}}</h4>
     {% endif %}
 {% endfor %}
-<h2>Already Purchased</h2>
+<h2>Ticked off:</h2>
 {% for item in items%}
     {% if item.bought%}
     <h4>{{item.name}}</h4>
