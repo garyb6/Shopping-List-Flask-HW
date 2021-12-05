@@ -1,8 +1,0 @@
-{% extends 'base.html' %} 
-    {% block content %}
-        <h1>Total Spend and Items</h1>
-        <h2>Total Cost</h2> 
-        <p>{{items|sum(attribute='price')}}</p>
-    <h2>Total Items</h2>
-        <p>{{items|sum(attribute='quantity')}}</p>
-    {% endblock%} 
