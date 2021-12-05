@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content%} 
         <h1>Trip to town</h1>
-
+        <h2> Add an shopping item </h2>
         <form action='/list' method='post'>
             <label for='name'>Item</label>
             <input type='text' name='name' id='name'>
@@ -14,9 +14,10 @@
             <br>
             <input type='submit' value='Add Item!'>
         </form>
+        <br>
         {% for item in items%}
         <h2>{{item.name}}</h2>
-        <p>Price: {{item.price}}</p>
+        <p>Price (£): {{item.price}}</p>
         <p>Quantity: {{item.quantity}}</p>
             {% if item.bought%}
                 <span>Bought? &#10004;</span>
@@ -24,4 +25,10 @@
                 <span>Bought? &#10008;</span>
             {% endif %}
         {% endfor %}
+        <br>
+        <br>
+        <h2>Total Cost</h2>
+        <p>{{Total_Cost}}</p>
+        <h2>Total Items</h2>
+        <p>{{Total_Cost}}</p>
 {% endblock %} 

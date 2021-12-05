@@ -14,3 +14,8 @@ def add_item():
     new_item = Items(item_name, item_price, item_quantity, False)
     add_new_item(new_item)
     return render_template ('index.html', title= "Shopping List", items=items)
+
+@app.route('/list')
+def cost(item):
+    total_cost(item)
+    return render_template('index.html', title= "Shopping List", Total_Cost= 'crying')
