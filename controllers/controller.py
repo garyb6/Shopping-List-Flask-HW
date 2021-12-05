@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request
+from flask import render_template, request, redirect
 from models.shopping_list import *
 
 @app.route('/list')
@@ -22,3 +22,8 @@ def total():
 @app.route('/shortlist')
 def shortlist():
     return render_template('shortlist.html', title= "Shortlist", items=items)
+
+@app.route('/lists/delete/<name>', methods=['POST'])
+def delete(name):
+    delete_item(name)
+    return render_template('index.html', title= "Shopping List", items=items)
