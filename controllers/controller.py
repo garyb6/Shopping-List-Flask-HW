@@ -15,7 +15,10 @@ def add_item():
     add_new_item(new_item)
     return render_template ('index.html', title= "Shopping List", items=items)
 
-@app.route('/list')
-def cost(item):
-    total_cost(item)
-    return render_template('index.html', title= "Shopping List", Total_Cost= 'crying')
+@app.route('/totals')
+def total():
+    return render_template('totals.html', title= "Total Amounts", items=items)
+
+@app.route('/shortlist')
+def shortlist():
+    return render_template('shortlist.html', title= "Shortlist", items=items)

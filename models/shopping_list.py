@@ -10,8 +10,8 @@ items=[item1, item2, item3, item4]
 def add_new_item(item):
     items.append(item)
 
-def total_cost(item):
-    amount = 0
+def total_amount(item):
     for item in items:
-        amount == sum(item.price)
-    return amount
+        total = 0
+        total += item
+    return total

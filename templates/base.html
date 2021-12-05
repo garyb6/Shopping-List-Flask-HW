@@ -3,13 +3,17 @@
         <title>{{title}}</title>
     </head>
     <body>
-        <ul>
-            <li>
-                <a href='/list'>Home</a>
-            </li>
-        </ul>
+        <nav> 
+            <ul>
+                <li>
+                    <a href='/list'>Home</a>
+                    <a href='/totals'> Totals</a>
+                    <a href='/shortlist'>Shortlist</a>
+                </li>
+            </ul>
+        </nav>
         {%block content%}
 
-        {% endblock %}
+        {% endblock%}
     </body>
     </html>
