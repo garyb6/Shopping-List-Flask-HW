@@ -2,9 +2,17 @@
 {% block content%} 
 <h1>Divide and Conquer</h1>
 <h2>Still to buy</h2>
-
+{% for item in items%}
+    {% if item.bought == False%}
+    <h4>{{item.name}}</h4>
+    {% endif %}
+{% endfor %}
 <h2>Bought</h2>
-
+{% for item in items%}
+    {% if item.bought%}
+    <h4>{{item.name}}</h4>
+    {% endif %}
+{% endfor %}
 
 
 {% endblock %} 
