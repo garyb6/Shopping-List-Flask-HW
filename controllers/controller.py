@@ -1,5 +1,5 @@
 from app import app
-from flask import render_template, request, redirect
+from flask import render_template, request
 from models.shopping_list import *
 
 @app.route('/list')

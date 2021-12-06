@@ -10,7 +10,7 @@
             <input type='number' name='price' id='price'>
             <br>
             <label for='quantity'>Quantity</label>
-            <input type='number' name='quantity' id='quantity'>
+            <input type= 'number' name='quantity' id='quantity'>
             <br>
             <input type='submit' value='Add Item!'>
         </form>
@@ -30,7 +30,7 @@
             </form>
         {% endfor %}
         
-        <h2 style="color: darkslategray;">Total Cost of list:</h2> <p>£{{items|sum(attribute='price')}}</p>
-    <h2 style="color: darkslategray;">Number of Items on list:</h2><p>{{items|sum(attribute='quantity')}}</p>
+        <h2>Total Cost of list:</h2> <p>£{{items|sum(attribute='price')}}</p>
+        <h2>Number of Items on list:</h2><p>{{items|sum(attribute='quantity')}}</p>
 
 {% endblock %} 
