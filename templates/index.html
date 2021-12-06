@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content%} 
-        <h1>Shopping Lists 4 u</h1>
+        <h1 style="color: purple">Shopping Lists 4 u</h1>
         <h2> Add an shopping item </h2>
         <form action='/list' method='post'>
             <label for='name'>Item</label>
@@ -16,7 +16,7 @@
         </form>
         <br>
         {% for item in items%}
-        <h2>{{item.name}}</h2>
+        <h2 style="color: green;">{{item.name}}</h2>
         <p>Price (£): {{item.price}}</p>
         <p>Quantity: {{item.quantity}}</p>
             {% if item.bought%}
@@ -30,7 +30,7 @@
             </form>
         {% endfor %}
         
-        <h2>Total Cost of list:</h2> <p>£{{items|sum(attribute='price')}}</p>
-    <h2>Number of Items on list:</h2><p>{{items|sum(attribute='quantity')}}</p>
+        <h2 style="color: darkslategray;">Total Cost of list:</h2> <p>£{{items|sum(attribute='price')}}</p>
+    <h2 style="color: darkslategray;">Number of Items on list:</h2><p>{{items|sum(attribute='quantity')}}</p>
 
 {% endblock %} 
