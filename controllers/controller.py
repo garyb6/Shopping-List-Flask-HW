@@ -15,9 +15,13 @@ def add_item():
     add_new_item(new_item)
     return render_template ('index.html', title= "Shopping List", items=items)
 
-@app.route('/shortlist')
-def shortlist():
-    return render_template('shortlist.html', title= "Shortlist", items=items)
+@app.route('/bought')
+def bought():
+    return render_template('bought.html', title= "Bought", items=items)
+
+@app.route('/not_bought')
+def not_bought():
+    return render_template('not_bought.html', title= "Still to buy", items=items)
 
 @app.route('/lists/delete/<name>', methods=['POST'])
 def delete(name):

@@ -7,15 +7,23 @@
             <ul>
                 <li>
                     <a href='/list'>Home</a>
-                    <a href='/shortlist'>Shortlist</a>
+                    <a href='/bought'>Purchased</a>
+                    <a href='not_bought'>Still to Buy</a>
                 </li>
             </ul>
         </nav>
         {%block content%}
 
         {% endblock%}
+        <div> <a href='/bought'>
+            <button>Already bought</button>
+        </a>
+        <a href='/not_bought'>
+            <button>Still to buy</button>
+        </a>
+        </div>
     </body>
     <footer>
-        <h6 style="color: purple"> Shopping Lists 4 u &copy; </h6>
+        <h6 style="color: yellow"> Shopping Lists 4 u &copy; </h6>
     </footer>
     </html>
